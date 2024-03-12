@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useQuery } from "react-query";
 
 import Item from "./Components/Items/Item";
+import Cart from "./Components/Cart/Cart";
 
 import { Wrapper } from "./App.styles";
 import { StyledButton } from "./App.styles";
@@ -36,9 +37,10 @@ function App() {
 
   const getTotalItems = (items: CartItemType[]) =>
     items.reduce((ack: number, item) => ack + item.amount, 0);
-  
+
   const handeleAddToCard = (clickedItem: CartItemType) => null;
-  const removeAddToCard = () => null;
+
+  const handeleRemoveFromCard = () => null;
 
   if (isLoading) return "Loading...";
   if (error) return "Error";
@@ -51,7 +53,11 @@ function App() {
           open={cartOpen}
           onClose={() => setCartOpen(false)}
         >
-          Cart
+          <Cart
+            cartItems={cartItems}
+            addToCart={handeleAddToCard}
+            removeFromCart={handeleRemoveFromCard}
+          />
         </Drawer>
         <StyledButton onClick={() => setCartOpen(true)}>
           <Badge badgeContent={getTotalItems(cartItems)} color="error">
