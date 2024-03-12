@@ -38,7 +38,21 @@ function App() {
   const getTotalItems = (items: CartItemType[]) =>
     items.reduce((ack: number, item) => ack + item.amount, 0);
 
-  const handeleAddToCard = (clickedItem: CartItemType) => null;
+  const handeleAddToCard = (clickedItem: CartItemType) =>
+    setCartItems((prev) => {
+      //is the item already on cart?
+      const isItemInCart = prev.find((item) => item.id === clickedItem.id);
+
+      if (isItemInCart) {
+        return prev.map((item) =>
+          item.id === clickedItem.id
+            ? { ...item, amount: item.amount + 1 }
+            : item
+        );
+      }
+      //first time the item added to he cart
+      return [...prev, { ...clickedItem, amount: 1 }];
+    });
 
   const handeleRemoveFromCard = () => null;
 
