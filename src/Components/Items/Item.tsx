@@ -1,4 +1,5 @@
 import { CartItemType } from "../../App";
+import { Button } from "@mui/material";
 import { Wrapper } from "./Item.styles";
 
 type Props = {
@@ -15,8 +16,7 @@ const Item: React.FC<Props> = ({ item, handeleAddToCard }) => {
         <p>{item.description}</p>
         <h3>${item.price}</h3>
       </div>
-          <button onClick={() => handeleAddToCard(item)}>Add to cart</button>
-          
+      <Button onClick={() => handeleAddToCard(item)}>Add to cart</Button>
     </Wrapper>
   );
 };
