@@ -1,30 +1,42 @@
-# React + TypeScript + Vite
+# Shopping Cart with React and TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Learn the fundamentals and how to build a ReactJS shopping cart with Typescript, Material UI, Styled Components and React-Query.
 
-Currently, two official plugins are available:
+This project uses a free open API for dummy data to the items in the shop. React-Query hooks is used for fetching the data from the API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Made by tutorial - [freeCodeCamp](https://youtu.be/sfmL6bGbiN8?si=6nN0xk5i7Tu2SrEm)
 
-## Expanding the ESLint configuration
+## Table of contents
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- [Overview](#overview)
+  - [Screenshot](#screenshot)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Useful resources](#useful-resources)
 
-- Configure the top-level `parserOptions` property like this:
+## Overview
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+### Screenshot
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+![](screenshot-gen.png)
+![](screenshot-cart.png)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS Grid
+- [React](https://reactjs.org/) - JS library
+- [Styled Components](https://styled-components.com/) - For styles
+- TypeScript
+
+### What I learned
+
+How to use styled components, Material UI and the most important - TypeScript
+
+### Useful resources
+
+- [Material UI](https://mui.com/material-ui/getting-started/) (new version) component library that includes a comprehensive collection of prebuilt components that are ready for use in production .
+- [Fake store API](https://fakestoreapi.com/products) - which provide all necessary data to imitate real store.
